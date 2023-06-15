@@ -17,11 +17,8 @@
   <!-- JS -->
   <script src="assets/js/main.js" type="module" defer></script>
 <!-- Animations -->
-<script src="assets/js/helpers/navbar.js"></script>
+<script src="./assets/js/helpers/navbar.js"></script>
 <script src="assets/js/helpers/darmode.js" type="module" defer></script>
-<h1>hola </h1>
-<h1>hola </h1>
-<h1>hola </h1>
 </head>
 <body>
   <!-- Loader -->
@@ -31,8 +28,11 @@
     </div>
   </div>
   <!-- Header -->
-  <header class="header">
+    <header class="header">
     <nav class="nav container">
+      <!-- BOTON DE DARK MODE -->
+      
+    </div>
       <picture class="loader__container">
         <img src="assets/img/logoaym.png" alt="Logo de pantalla de carga" class="logo--icon">
       </picture>
@@ -59,17 +59,19 @@
         <input type="text" placeholder=" Buscar" name="search" class="search--bar" id="buscador">
             <button type="button" class="nav__btn">
               <i class='bx bx-search-alt-2' style='color:#ffffff' ></i>
-              <button type="button" class="nav__btn">
-                <i class='bx bxs-sun' style='color:#ffffff'  ></i>
-                <button type="button" class="nav__btn">
-                  <i class='bx bxs-moon' style='color:#ffffff'  ></i>
-            </button>
-        <button type="button" class="nav__btn btn--cart">
+            <button type="button" class="nav__btn btn--cart">
           <i class='bx bx-cart-alt' style='color:#ffffff'  ></i>
           <span class="notify">0</span>
         </button>
         <button type="button" class="nav__btn btn--menu">
           <i class='bx bx-dots-vertical-rounded bx-rotate-180' style='color:#ffffff'  ></i>
+        </button>
+        <button class="switch" id="switch">
+          <span>
+            <i class='bx bxs-sun'></i>
+          </span>
+          <span>
+            <i class='bx bxs-moon'></i>
         </button>
       </div>
     </nav>

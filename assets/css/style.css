@@ -19,10 +19,10 @@
   --header-height: 56px;
   /* Colors  */
   --primary-color: hsl(0, 9%, 98%);
-  --body-color: hsl(281, 99%, 31%);
+  --body-color: #7515A2;
   --text-color: hsl(0, 0%, 100%);
   --title-color: hsl(0, 0%, 100%);
-  --bg-color: hsl(22, 88%, 50%);
+  --bg-color: #FB6C0A;
   --card-color: hsl(0, 0%, 90%);
 
   /* Font and typography */
@@ -357,6 +357,10 @@ button {
   min-height: 109px;
 }
 
+.product__content:hover {
+  background: linear-gradient(to bottom, #7515A2, #FB6C0A);
+}
+
 .product__btn {
   position: absolute;
   top: 0;
@@ -376,7 +380,7 @@ button {
 }
 
 .product__btn:hover {
-  background-color: var(--primary-color);
+  background-color: #7515A2;
   color: var(--bg-color);
 }
 
@@ -550,7 +554,7 @@ border-bottom: 1.5px solid black;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
-  background-color: var(--card-color);
+  background-color: black;
   padding: var(--sp-1);
   row-gap: var(--sp-1);
 }
@@ -618,4 +622,89 @@ border-bottom: 1.5px solid black;
   .container {
     margin: 0 auto;
   }
+}
+
+/* ==================  BOTON DRAKMODE  =================== */
+body.dark {
+  background-color: #000000;
+}
+
+/* Estilos para el modo oscuro */
+.dark .products__title {
+  color: #fff; /* Color del texto en modo oscuro */
+}
+
+/* Estilos para el modo claro */
+.products__title {
+  color: #000; /* Color del texto en modo claro */
+}
+
+/* =============  SWITCH DARK MODE============ */
+.switch {
+  background: #343058;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+
+.switch.active {
+  background: orange;
+  color: #000000;
+}
+
+.switch.active::after{
+  right: 0;
+  left: unset;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+p {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
